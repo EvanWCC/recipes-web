@@ -7,7 +7,7 @@ import './App.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 function App({match}) {
-  console.log(process.env.REACT_APP_RECIPE_API_KEY)
+  
   return (
     <RecipeContextProvider>
       

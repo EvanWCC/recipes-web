@@ -25,9 +25,10 @@ const RecipeContextProvider = (props) => {
     const[food, setFood] = useState("");
     const[country, setCountry] = useState("")
     const[type, setType] = useState("")
+    const RECIPE_API_KEY = "41b43eb0b8a44f078a40831dc9a102a7 "
     useEffect(() => {
         async function getData() {
-            const request = await axios.get(`https://api.spoonacular.com/recipes/search?query=${food}&cuisine=${country}&number=150&apiKey=${process.env.REACT_APP_RECIPE_API_KEY}&type=${type}`);
+            const request = await axios.get(`https://api.spoonacular.com/recipes/search?query=${food}&cuisine=${country}&number=150&apiKey=41b43eb0b8a44f078a40831dc9a102a7&type=${type}`);
             setRecipes(request.data.results)
             
         }
